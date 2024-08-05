@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import GameCard from "./GameCard"
+
+const gameList = [
+  {
+    id: 0,
+    name: "Cribbage",
+    rating: null,
+    category: "Board game"
+  },
+  {
+    id: 1,
+    name: "Mancala",
+    rating: null,
+    category: "Board game"
+  },
+  {
+    id: 2,
+    name: "Uno",
+    rating: null,
+    category: "Cards"
+  }
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>React Portfolio Project</h1>
+      { gameList.map( g => <GameCard game={g} />) }
     </div>
   );
 }
